@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navigation">
+        <div class="hamburger open">
+            <div class="mobile-menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="mobile-nav-container">
+                <li class="mobile-nav-item"><a href="#about">About me</a></li>
+                <li class="mobile-nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="mobile-nav-item"><a href="#contacts">Contacts</a></li>
+                <li class="mobile-nav-item active"><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+        <ul class="nav-container">
+            <li class="nav-item"><a href="#about">About me</a></li>
+            <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a href="#contacts">Contacts</a></li>
+            <li class="nav-item active"><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <h1>John Doe, Front-end Developer</h1>
+</header>
+<main>
+    <!-- Start of About me -->
+    <section id="about">
+        <div class="profile-picture">
+            <img alt="My profile picture" src="./assets/profile-picture.jpg">
+        </div>
+        <div class="right-side">
+            <h2>About me</h2>
+            <p class="biography">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur,
+                nisl nunc euismod nisi, eu aliquam nisl nunc euismod nisi.
+            </p>
+        </div>
+    </section>
+    <!-- End of About me -->
+
+    <!-- Start of Portfolio -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projects-container">
+            <div class="project">
+                <img src="./assets/img/projects/project1.png" alt="Flash Cards">
+                <p>Flash Cards</p>
+                <button class="open-window" onclick="openPopUp()">View More</button>
+            </div>
+            <div class="project">
+                <img src="./assets/img/projects/project2.png" alt="Virtual Piano">
+                <p>Virtual Piano</p>
+                <button class="open-window" onclick="openPopUp()">View More</button>
+            </div>
+        </div>
+    </section>
+    <!-- End of Portfolio -->
+
+    <!-- Start of Contact -->
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <p>Phone: +94-11 223 4567</p>
+        <p>Email: johndoe@gmail.com</p>
+    </section>
+    <!-- End of Contact -->
+
+    <!-- Start of Footer -->
+    <footer>
+        <p>&copy; John Doe 2020</p>
+    </footer>
+
+    <div class="window">
+        <div class="card">
+            <h2 id="popup-title">Flashcards</h2>
+            <p>You can see the project at the following link: <a id="popup-link" href="#">flashcards</a></p>
+            <p id="popup-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu
+                tincidunt consectetur,
+                nisl nunc euismod nisi, eu aliquam nisl nunc euismod nisi.
+            </p>
+            <div class="close-window">
+                <button>Close</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header {
+  position: relative;
+  height: 60vh;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+}
+
+header > .navigation {
+  display: flex;
+  justify-content: flex-end;
+  background-color: saddlebrown;
+}
+
+header > .navigation > .nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header > .navigation > .nav-container > .nav-item {
+  padding: 15px 8px;
+}
+
+header > .navigation > .nav-container > .nav-item > a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: ghostwhite;
+}
+
+header > .navigation > .nav-container > .nav-item:hover, header > .navigation > .nav-container > .nav-item:hover > a {
+  color: brown;
+  background-color: darkgrey;
+}
+
+header > .navigation > .hamburger {
+  position: relative;
+  display: none;
+  margin: 5px;
+}
+
+@media screen and (max-width: 600px)  {
+  header > .navigation {
+    background-color: black;
+  }
+
+  header > .navigation > .nav-container {
+    display: none;
+  }
+
+  header > .navigation > .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+  }
+  header > .navigation > .hamburger > .mobile-menu-icon {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  header > .navigation > .hamburger > .mobile-menu-icon .bar{
+    width: 24px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: ghostwhite;
+  }
+
+  header > .navigation > .hamburger.open > .mobile-menu-icon .bar:first-child {
+    position: absolute;
+    top: 13px;
+    object-position: center;
+    transition: all 0.2s;
+    transform: rotate(45deg);
+  }
+  header > .navigation > .hamburger.open > .mobile-menu-icon .bar:last-child {
+    position: absolute;
+    top: 13px;
+    object-position: center;
+    transition: all 0.2s;
+    transform: rotate(-45deg);
+  }
+  header > .navigation > .hamburger.open > .mobile-menu-icon .bar:nth-child(2) {
+    display: none;
+  }
+
+  header > .navigation > .hamburger > .mobile-nav-container {
+    display: none;
+    height: 0;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  header > .navigation > .hamburger > .mobile-nav-container .mobile-nav-item{
+    width: 100%;
+    padding: 15px 8px;
+    text-align: end;
+    cursor: pointer;
+  }
+
+  header > .navigation > .hamburger > .mobile-nav-container .mobile-nav-item:hover{
+    background-color: rgba(255,255,255,0.2);
+  }
+
+  header > .navigation > .hamburger > .mobile-nav-container .mobile-nav-item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: ghostwhite;
+  }
+
+  header > .navigation > .hamburger.open > .mobile-nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    list-style: none;
+    width: 100%;
+    height: fit-content;
+    z-index: 1;
+  }
+}
+
+header > h1 {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: ghostwhite;
+  font-weight: bold;
+  text-align: left;
+}
+
+#about{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 25px;
+  background-color: lightblue;
+}
+
+#about > .profile-picture img {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+#about > .right-side{
+  width: 50%;
+  text-align: left;
+}
+
+#about > .right-side > .biography{
+  color: black;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+#portfolio{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 25px;
+  background-color: floralwhite;
+  text-align: center;
+}
+
+#portfolio > .projects-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 0 auto;
+  grid-gap: 30px;
+  grid-column-gap: 20px;
+}
+
+#portfolio > .projects-container .project{
+  position: relative;
+  background-color: white;
+}
+
+#portfolio > .projects-container > .project > img {
+  width: 300px;
+  height: 200px;
+}
+
+#portfolio > .projects-container > .project > p{
+  margin-top: 3px;
+  text-align: center;
+}
+
+#portfolio > .projects-container > .project > .open-window{
+  position: absolute;
+  top: 100px;
+  left: 120px;
+  background-color: white;
+  color: darkblue;
+  border: solid darkblue 1px;
+  border-radius: 25px;
+  padding: 4px 6px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+  #portfolio > .projects-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 25px;
+}
+
+#contacts > p{
+  margin-top: 0;
+  text-align: center;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  background-color: saddlebrown;
+  text-align: center;
+}
+
+.window {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.window > .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 50%;
+  background-color: white;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.window > .card > #popup-title {
+  color: brown;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.window > .card > .close-window > button{
+  cursor: pointer;
+}
